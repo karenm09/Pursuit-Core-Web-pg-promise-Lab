@@ -38,5 +38,7 @@ INSERT INTO posts (poster_id, body)
           (5, 'I like turtles'),
           (5, 'My favorite number is 8');
 
+
 SELECT * FROM users;
 SELECT * FROM posts;
+SELECT * FROM likes;
