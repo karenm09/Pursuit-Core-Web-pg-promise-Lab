@@ -45,7 +45,8 @@ INSERT INTO posts (poster_id, body)
           (5, 'My favorite number is 8');
 
 INSERT INTO likes (liker_id, post_id)
-    VALUES (1, 1),
+    VALUES 
+        (1, 1),
         (2, 3),
         (3, 5),
         (4, 6),
@@ -64,7 +65,7 @@ INSERT INTO likes (liker_id, post_id)
         (4, 6),
         (1, 8),
         (2, 9),
-        (1, 9),
+        (1, 9);
 
 
 SELECT * FROM users;
