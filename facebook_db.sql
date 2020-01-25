@@ -19,6 +19,12 @@ CREATE TABLE posts(
     body VARCHAR
 );
 
+CREATE TABLE likes(
+    id SERIAL PRIMARY KEY,
+    liker_id INT REFERENCES users (id),
+    post_id INT REFERENCES posts (id)
+)
+
 INSERT INTO users(firstname, lastname, age)
     VALUES('Adam', 'Addams', 40),
           ('Beth', 'Brown', 51),
@@ -37,6 +43,28 @@ INSERT INTO posts (poster_id, body)
           (5, 'I am Eve! Welcome!'),
           (5, 'I like turtles'),
           (5, 'My favorite number is 8');
+
+INSERT INTO likes (liker_id, post_id)
+    VALUES (1, 1),
+        (2, 3),
+        (3, 5),
+        (4, 6),
+        (5, 8),
+        (1, 2),
+        (1, 7),
+        (1, 3),
+        (3, 7),
+        (4, 7),
+        (2, 4),
+        (4, 10),
+        (3, 8),
+        (2, 4),
+        (1, 10),
+        (2, 2),
+        (4, 6),
+        (1, 8),
+        (2, 9),
+        (1, 9),
 
 
 SELECT * FROM users;
