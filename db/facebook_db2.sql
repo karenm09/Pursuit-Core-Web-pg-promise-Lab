@@ -23,7 +23,7 @@ CREATE TABLE likes(
     id SERIAL PRIMARY KEY,
     liker_id INT REFERENCES users (id),
     post_id INT REFERENCES posts (id)
-)
+);
 
 INSERT INTO users(firstname, lastname, age)
     VALUES('Adam', 'Addams', 40),

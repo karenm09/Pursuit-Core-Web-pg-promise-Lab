@@ -5,7 +5,7 @@ const pgp = require('pg-promise')();
 const connection = {
     host: 'localhost',
     port: 5432,
-    database: 'facebook_db',
+    database: 'facebook_db2',
 }
 const db = pgp(connection);
 
