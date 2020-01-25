@@ -36,4 +36,16 @@ router.post('/register', (req, res) => {
     });
 });
 
+router.get("/:id/post", async (req, res) => {
+  try{
+    let posts = await db.any("SELECT * FROM posts WHERE poster_id = $1", req.params.id)
+    res.status(200).json({
+        posts,
+        status: "success",
+    })
+  } catch (err) {
+      console.log(err)
+  }
+})
+
 module.exports = router;
