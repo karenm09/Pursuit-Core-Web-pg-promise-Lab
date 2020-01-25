@@ -1,10 +1,10 @@
-\c template1
+-- \c template1
 
-DROP DATABASE IF EXISTS facebook_db;
+DROP DATABASE IF EXISTS facebook_db2;
 
-CREATE DATABASE facebook_db;
+CREATE DATABASE facebook_db2;
 
-\c facebook_db;
+\c facebook_db2;
 
 CREATE TABLE users(
     id SERIAL PRIMARY KEY,
